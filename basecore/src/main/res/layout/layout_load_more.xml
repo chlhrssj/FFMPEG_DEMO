@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/mLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <ProgressBar
+            android:id="@+id/mProgress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:indeterminateDuration="300"
+            android:indeterminateDrawable="@drawable/icon_load"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/mTvLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#cfd8dc"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mProgress"
+            android:text="Loading"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mLoadingSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#cfd8dc"
+            android:text="加载成功"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mLoadingFail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#cfd8dc"
+            android:text="加载失败"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mNoMoreData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#cfd8dc"
+            android:text="我是有底线的"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

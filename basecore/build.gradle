@@ -1,7 +1,6 @@
 apply from: "${rootProject.rootDir}/config.gradle"
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
@@ -12,6 +11,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    viewBinding {
+        enabled = true
     }
 
 }
@@ -46,6 +49,15 @@ dependencies {
     api "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
     api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit_version"
     api "com.squareup.okhttp3:logging-interceptor:3.10.0"
+
+    //okhttp
+    api 'com.squareup.okhttp3:okhttp:4.2.2'
+    //http log
+    api('com.github.ihsanbal:LoggingInterceptor:3.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
 
     //leak
     debugApi "com.squareup.leakcanary:leakcanary-android:$rootProject.leakcanary_version"

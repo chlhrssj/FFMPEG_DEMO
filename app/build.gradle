@@ -1,7 +1,6 @@
 apply from: "${rootProject.rootDir}/config.gradle"
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     project.ext.setDefaultConfig project
@@ -38,6 +37,11 @@ android {
             }
         }
     }
+
+    viewBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {

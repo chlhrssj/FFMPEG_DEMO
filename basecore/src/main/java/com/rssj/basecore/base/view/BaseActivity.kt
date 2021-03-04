@@ -46,7 +46,7 @@ abstract class BaseActivity<VM : BaseViewModel<*>, V : ViewBinding> : AppCompatA
     /**
      * ViewBinding实例
      */
-    private lateinit var mBinding: V
+    protected lateinit var mBinding: V
 
     /**
      * 加载进度对话框

@@ -27,6 +27,8 @@ dependencies {
     api "com.google.android.material:material:$rootProject.material_version"
     api "androidx.core:core-ktx:$rootProject.ktx_version"
     api "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout_version"
+    api "androidx.activity:activity-ktx:1.1.0"
+    api "androidx.fragment:fragment-ktx:1.2.5"
 
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutines_version"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutines_version"
